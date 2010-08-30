@@ -3,6 +3,11 @@
 use Socket;
 use POSIX;
 
+sub usage
+{
+	print "$0 port\n";
+}
+
 #----------------MAIN-------------------
 # if($ARGV[0] eq "-q"){$quiet=1;shift;}
 $port = ($ARGV[0] || 12345);
