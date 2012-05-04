@@ -1,1 +1,1 @@
-all: unixclient unixserver unixserver-listen
+all: unixclient unixserver unixserver-listen semtool 
