@@ -6,6 +6,8 @@
 #include <arpa/inet.h>
 #include <netdb.h>
 #include <sys/un.h>
+#include <string.h>
+#include <unistd.h>
 
 int main(int argc, char*argv[])
 {
@@ -33,7 +35,7 @@ int main(int argc, char*argv[])
 	ret = bind(s, (struct sockaddr*)&saun, sizeof(saun));
 	if(ret<0){perror("bind:"); exit(1);}
 
-	ret = listen(s, 0);
+	ret = listen(s, 5);
 	if(ret<0){perror("listen"); exit(1);}
 
 	sleep(1000);
